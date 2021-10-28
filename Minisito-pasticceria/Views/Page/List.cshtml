@@ -1,0 +1,30 @@
+﻿@using Minisito_pasticceria.Models
+
+<div class="about-heading-content">
+    <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+                @foreach (PostModel post in ViewBag.postList)
+                {
+                <div>
+                    <ul class="list-group">
+                        <a href="/page/detail/@post.id">
+                        <li class="list-group-item mb-2">
+                            <div>
+                                @post.id
+                            </div>
+                            <div>
+                                <b>Titolo:</b><br /><p>@post.title</p>
+                            </div>
+                            @*<div>
+                                <b>Contenuto Post:</b><br /><p>@post.body</p>
+                            </div>*@
+                        </li>
+                        </a>
+                    </ul>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

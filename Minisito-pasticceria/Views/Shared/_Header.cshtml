@@ -1,0 +1,25 @@
+﻿@model Minisito_pasticceria.Models.HeaderModel
+
+<!-- Header -->
+
+<header>
+    <h1 class="site-heading text-center text-faded d-none d-lg-block">
+        @if (Model == null)
+        {
+            <span>Test</span>
+        }
+        else
+        {
+            if (Model.getTitle() == null)
+            {
+                <span class="site-heading-upper text-primary mb-3"></span>
+            }
+            else
+            {
+                <span class="site-heading-upper text-primary mb-3">@Model.getTitle()</span>
+            }
+            <span class="site-heading-lower">@Model.getSubtitle()</span>
+        }
+
+    </h1>
+</header>
